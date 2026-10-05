@@ -2,7 +2,7 @@
     "agents": [
         "claude_code"
     ],
-    "mcp": true,
+    "mcp": false,
     "nightwatch": false,
     "sail": false
 }
