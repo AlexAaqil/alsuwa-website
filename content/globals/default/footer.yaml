@@ -1,0 +1,34 @@
+copyright_text: '© 2026 Alsuwa. All rights reserved.'
+quick_links:
+  -
+    id: zzukiSxk2eZppPahdzG9j
+    link_text: Home
+    link_url: 'entry::049ed0c0-9796-43f7-b158-4f6129328c12'
+  -
+    id: GVnp5_cGtlaQwpaRmCeEc
+    link_text: About
+  -
+    id: WsdyAa7snqRpbawtz1dfM
+    link_text: Services
+  -
+    id: z9KsA_a1-BRmZbXRXqs1l
+    link_text: Portfolio
+  -
+    id: Sf7T2eTJ3YmSG4jS43kx_
+    link_text: Software
+  -
+    id: jLGSbVmFs7p7Vq7pUexB2
+    link_text: Contact
+services:
+  -
+    id: WuCwfN8SnDzxTSQRSusgD
+    link_text: 'Custom Software'
+  -
+    id: qwItBF9-VyLH-rfVTtVC4
+    link_text: 'Web Development'
+  -
+    id: 2krVZzm9dbpSeZ0SGoxgs
+    link_text: 'Mobile Apps'
+  -
+    id: Oi_Y29bK7Yxo8_z8MUTnG
+    link_text: 'SEO Services'

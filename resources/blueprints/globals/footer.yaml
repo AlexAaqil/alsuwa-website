@@ -1,0 +1,54 @@
+title: Footer
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: copyright_text
+            field:
+              type: text
+              display: 'Copyright Text'
+          -
+            handle: quick_links
+            field:
+              type: grid
+              display: 'Quick Links'
+              fields:
+                -
+                  handle: link_text
+                  field:
+                    type: text
+                    display: 'Link Text'
+                -
+                  handle: link_url
+                  field:
+                    type: link
+                    display: 'Link URL'
+          -
+            handle: services
+            field:
+              type: grid
+              display: Services
+              fields:
+                -
+                  handle: link_text
+                  field:
+                    type: text
+                    display: 'Link Text'
+                -
+                  handle: link_url
+                  field:
+                    type: link
+                    display: 'Link URL'
+          -
+            handle: privacy_policy_link
+            field:
+              type: link
+              display: 'Privacy Policy Link'
+          -
+            handle: terms_of_service_link
+            field:
+              type: link
+              display: 'Terms of Service Link'

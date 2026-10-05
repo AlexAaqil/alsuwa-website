@@ -1,0 +1,142 @@
+<section class="CTA">
+    <div class="container-fluid grid gap-8 lg:grid-cols-2">
+        <div class="left space-y-4">
+            <p class="title leading-[1.03] font-accent font-bold text-l-text">Let's Build Something Great!</p>
+
+            <p class="description lg:w-[90%]">We'll respond within 24 hours with an honest assessment, a rough scope, and a clear sense of whether we're the right team for you. No sales pitch. No obligation.</p>
+
+            <div class="extras flex flex-wrap gap-8">
+                <div class="flex gap-1 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer preview-icon w-4 h-4"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+
+                    <span class="text-body-label-text">24 hour response</span>
+                </div>
+
+                <div class="flex gap-1 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video preview-icon w-4 h-4"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+                    <span class="text-body-label-text">Free discovery call</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <form id="contact-form">
+                <div class="inputs-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name" placeholder="Jane Doe" />
+                </div>
+
+                <div class="inputs-group">
+                    <label for="budget">Budget Range (Ksh)</label>
+                    <select name="budget" id="budget">
+                        <option value="">Select your budget range</option>
+                        <option value="0-20k">0 - 20,000</option>
+                        <option value="20k-30k">20,000 - 30,000</option>
+                        <option value="30k-50k">30,000 - 50,000</option>
+                        <option value="50k-100k">50,000 - 100,000</option>
+                        <option value="100k-200k">100,000 - 200,000</option>
+                        <option value="200k+">200,000+</option>
+                        <option value="not-sure">Not sure</option>
+                    </select>
+                </div>
+
+                <div class="inputs-group">
+                    <label for="project-type">Project Type</label>
+                    <select name="project-type" id="project-type">
+                        <option value="">Select your project type</option>
+                        <option value="web-development">Web Development</option>
+                        <option value="custom-software">Custom Software</option>
+                        <option value="ui-ux-design">UI/UX Design</option>
+                        <option value="mobile-app-development">Mobile App Development</option>
+                        <option value="api-integration">API Integration</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="inputs-group">
+                    <label for="description">Project Description</label>
+                    <textarea name="description" id="description" placeholder="Tell us about your project..." rows="3"></textarea>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn-primary form-submit">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    let msg = document.getElementById('form-msg');
+    if (!msg) {
+      msg = document.createElement('div');
+      msg.id = 'form-msg';
+      msg.style.display = 'none';
+      msg.style.padding = '10px';
+      msg.style.marginTop = '10px';
+      msg.style.borderRadius = '5px';
+      form.appendChild(msg);
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name')?.value || '';
+      const budget = document.getElementById('budget')?.value || '';
+      const projectType = document.getElementById('project-type')?.value || '';
+      const message = document.getElementById('description')?.value || '';
+
+      if (!name) {
+        const errorMsg = document.getElementById('form-msg');
+        if (errorMsg) {
+          errorMsg.textContent = 'Please fill in your name.';
+          errorMsg.style.color = '#FF6B5B';
+          errorMsg.style.display = 'block';
+          setTimeout(() => {
+            errorMsg.style.display = 'none';
+          }, 3000);
+        }
+        return;
+      }
+
+      const phoneNumber = '254745744261';
+      const whatsappMessage = `*Hi! I'd like to make an Inquiry*\n\n*Name:* ${name}\n*Project Type:* ${projectType}\n*Budget Range:* ${budget}\n*Message:* ${message || 'No message provided'}`;
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+      const statusMsg = document.getElementById('form-msg');
+      const btn = form.querySelector('.form-submit');
+      const originalBtnText = btn?.textContent || 'Send message';
+
+      if (btn) {
+        btn.textContent = 'Opening WhatsApp...';
+        btn.disabled = true;
+      }
+
+      window.open(whatsappURL, '_blank');
+
+      setTimeout(() => {
+        if (statusMsg) statusMsg.style.display = 'block';
+        if (btn) {
+          btn.textContent = 'Sent ✓';
+          btn.style.background = '#6BE995';
+        }
+        form.reset();
+
+        setTimeout(() => {
+          if (btn) {
+            btn.textContent = originalBtnText;
+            btn.style.background = '';
+            btn.disabled = false;
+          }
+          if (statusMsg) statusMsg.style.display = 'none';
+        }, 3000);
+      }, 1000);
+    });
+  });
+</script>

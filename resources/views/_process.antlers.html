@@ -1,0 +1,20 @@
+<section class="Process">
+    <div class="container-fluid">
+        <div class="section-header text-center space-y-4 mb-4 lg:mb-8">
+            <h2 class="font-accent font-bold text-heading-text lg:text-l-text">{{ process:process_title }}</h2>
+            <p class="lg:w-[60%] lg:mx-auto">{{ process:process_description }}</p>
+        </div>
+
+        <div class="content">
+            <div class="process-steps grid lg:grid-cols-3 gap-8">
+                {{ process:process_grid }}
+                    <div class="step space-y-2 p-4 border border-border rounded-lg">
+                        <p class="font-bold text-muted-foreground">{{ step_label }}</p>
+                        <p class="font-bold">{{ step_title }}</p>
+                        <p>{{ step_description }}</p>
+                    </div>
+                {{ /process:process_grid }}
+            </div>
+        </div>
+    </div>
+</section>

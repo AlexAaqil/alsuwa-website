@@ -1,0 +1,33 @@
+process_title: 'Our Working Process'
+process_description: "No vague timelines. No disappearing after kickoffs. No invoices for work you didn't agree to. Here's exactly how a project runs."
+process_grid:
+  -
+    id: EpjczsaLGinkix8oxjEJW
+    step_label: '01'
+    step_title: 'Discovery Call'
+    step_description: 'A deep dive focused 15-minute conversation to dive into your goals, users and constraints so we build the right thing, not just anything.'
+  -
+    id: JQpZuPCjTmcpi2zYPbj20
+    step_label: '02'
+    step_title: 'Scoped Proposal'
+    step_description: "Clearly written document: deliverables, timeline, pricing - no vague estimates. You know exactly what you're signing before any money moves."
+  -
+    id: 5hQIQWKECi20OvEWEAaUs
+    step_label: '03'
+    step_title: 'Design Sprints'
+    step_description: 'Clickable prototypes before building anything. You approve the experience. What you see is what gets built.'
+  -
+    id: JgOgi7Wit4j57NYBEJA3N
+    step_label: '04'
+    step_title: 'Agile Build Sprints'
+    step_description: 'Weekly demos and transparent progress tracking. No black boxes, no empty promises for six weeks.'
+  -
+    id: yqLtdvbifKcZB-iMR3DsP
+    step_label: '05'
+    step_title: 'QA & Launch'
+    step_description: 'Tested across devices, browsers, and load scenarios. We release in stages so launch day is quiet - which means everything worked.'
+  -
+    id: S1UW0FlIuBbaGQ1C8iAF1
+    step_label: '06'
+    step_title: 'Growth & Support'
+    step_description: "Post-launch support, monitoring, perfomance tuning and a retainer option for ongoing features. We're not a project shop - we become part of your team."

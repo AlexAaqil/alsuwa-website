@@ -1,0 +1,37 @@
+title: 'App Details'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: brand_name
+            field:
+              type: text
+              display: 'Brand Name'
+          -
+            handle: brand_tagline
+            field:
+              type: text
+              display: 'Brand Tagline'
+          -
+            handle: address
+            field:
+              type: text
+              display: Address
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+          -
+            handle: days
+            field:
+              type: text
+              display: Days
+          -
+            handle: time
+            field:
+              type: text
+              display: Time

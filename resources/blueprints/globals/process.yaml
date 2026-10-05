@@ -1,0 +1,38 @@
+title: Process
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: process_title
+            field:
+              type: text
+              display: 'Process Title'
+          -
+            handle: process_description
+            field:
+              type: text
+              display: 'Process Description'
+          -
+            handle: process_grid
+            field:
+              type: grid
+              display: 'Process Grid'
+              fields:
+                -
+                  handle: step_label
+                  field:
+                    type: text
+                    display: 'Step Label'
+                -
+                  handle: step_title
+                  field:
+                    type: text
+                    display: 'Step Title'
+                -
+                  handle: step_description
+                  field:
+                    type: text
+                    display: 'Step Description'

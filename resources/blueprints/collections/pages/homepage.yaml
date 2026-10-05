@@ -1,0 +1,221 @@
+title: HomePage
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: hero_punch_line
+            field:
+              type: text
+              validate:
+                - required
+              display: 'Hero Punch Line'
+          -
+            handle: hero_description
+            field:
+              type: text
+              display: 'Hero Description'
+          -
+            handle: hero_actions
+            field:
+              type: grid
+              display: 'Hero Actions'
+              fields:
+                -
+                  handle: hero_action_text
+                  field:
+                    type: text
+                    display: 'Hero Action Text'
+                -
+                  handle: hero_action_url
+                  field:
+                    type: link
+                    display: 'Hero Action URL'
+          -
+            handle: services_title
+            field:
+              type: text
+              display: 'Services Title'
+          -
+            handle: services_description
+            field:
+              type: text
+              display: 'Services Description'
+          -
+            handle: services_grid
+            field:
+              type: grid
+              display: 'Services Grid'
+              fields:
+                -
+                  handle: service_image
+                  field:
+                    container: statamic_images
+                    max_files: 1
+                    min_files: 1
+                    type: assets
+                    display: 'Service Image'
+                -
+                  handle: service_title
+                  field:
+                    type: text
+                    display: 'Service Title'
+                -
+                  handle: service_description
+                  field:
+                    type: text
+                    display: 'Service Description'
+                -
+                  handle: service_tags
+                  field:
+                    type: grid
+                    display: 'Service Tags'
+                    fields:
+                      -
+                        handle: service_tag
+                        field:
+                          type: text
+                          display: 'Service Tag'
+          -
+            handle: recent_work_title
+            field:
+              type: text
+              display: 'Recent Work Title'
+          -
+            handle: recent_work_description
+            field:
+              type: text
+              display: 'Recent Work Description'
+          -
+            handle: recent_works
+            field:
+              type: grid
+              display: 'Recent Works'
+              fields:
+                -
+                  handle: project_image
+                  field:
+                    container: statamic_images
+                    max_files: 1
+                    min_files: 1
+                    type: assets
+                    display: 'Project Image'
+                -
+                  handle: project_title
+                  field:
+                    type: text
+                    display: 'Project Title'
+                -
+                  handle: project_description
+                  field:
+                    type: textarea
+                    display: 'Project Description'
+                -
+                  handle: project_tags
+                  field:
+                    type: grid
+                    display: 'Project Tags'
+                    fields:
+                      -
+                        handle: tag_title
+                        field:
+                          type: text
+                          display: 'Tag Title'
+                -
+                  handle: project_links
+                  field:
+                    type: grid
+                    display: 'Project Links'
+                    fields:
+                      -
+                        handle: project_link_text
+                        field:
+                          type: text
+                          display: 'Project Link Text'
+                      -
+                        handle: project_link_url
+                        field:
+                          type: link
+                          display: 'Project Link URL'
+          -
+            handle: pricing_title
+            field:
+              type: text
+              display: 'Pricing Title'
+          -
+            handle: pricing_description
+            field:
+              type: text
+              display: 'Pricing Description'
+          -
+            handle: pricing_grid
+            field:
+              type: grid
+              display: 'Pricing Grid'
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: price
+                  field:
+                    type: text
+                    display: Price
+                -
+                  handle: renewable_period
+                  field:
+                    type: text
+                    display: 'Renewable Period'
+                -
+                  handle: description
+                  field:
+                    type: text
+                    display: Description
+                -
+                  handle: features
+                  field:
+                    type: grid
+                    display: Features
+                    fields:
+                      -
+                        handle: feature
+                        field:
+                          type: text
+                          display: feature
+                -
+                  handle: pricing_link_text
+                  field:
+                    type: text
+                    display: 'Pricing Link Text'
+                -
+                  handle: pricing_link_url
+                  field:
+                    type: link
+                    display: 'Pricing Link URL'
+                -
+                  handle: most_popular_badge
+                  field:
+                    type: toggle
+                    display: 'Most Popular Badge'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

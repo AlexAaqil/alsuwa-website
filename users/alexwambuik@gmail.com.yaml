@@ -6,3 +6,10 @@ preferences:
   collections:
     pages:
       view: tree
+  nav:
+    content:
+      reorder:
+        - 'content::collections'
+        - 'content::collections::pages'
+      items:
+        'content::collections::pages': '@move'
