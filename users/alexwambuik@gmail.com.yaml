@@ -1,0 +1,8 @@
+name: 'Alex Wambui'
+super: true
+id: 40b3ce1a-342a-451d-9f4d-fa4aa4a56c17
+password_hash: $2y$12$ojIiNOtzi2IlOoW/NdLmLuJNlHBui4YsbUIPaL2L7Jjxso4TtuGKW
+preferences:
+  collections:
+    pages:
+      view: tree
