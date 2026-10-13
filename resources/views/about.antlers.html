@@ -1,0 +1,74 @@
+<main class="AboutPage">
+    <section class="Hero">
+        <div class="container-fluid">
+            <h1 class="font-bold text-heading-text lg:text-l-text lg:text-center mb-4">{{ aboutpage_title }}</h1>
+            <p class="lg:text-center w-[60%] lg:mx-auto">{{ aboutpage_description }}</p>
+        </div>
+    </section>
+
+    <section class="MissionVision">
+        <div class="container-fluid">
+            <h2 class="font-bold text-heading-text lg:text-l-text lg:text-center mb-4">{{ mission_vision_title }}</h2>
+            <div class="mission_vision_grid_wrapper grid gap-8 lg:grid-cols-2">
+                {{ mission_vision_grid }}
+                    <div class="card bg-highlight rounded-lg p-4">
+                        <p class="font-bold mb-4 lg:text-center">{{ card_title }}</p>
+                        <p class="lg:text-center lg:w-[75%] lg:mx-auto">{{ card_content }}</p>
+                    </div>
+                {{ /mission_vision_grid }}
+            </div>
+        </div>
+    </section>
+
+    <section class="Stats">
+        <div class="container-fluid">
+            <div class="stats-wrapper grid grid-cols-2 lg:grid-cols-4 gap-8 rounded-lg">
+                {{ stats_cards }}
+                    <div class="card grid gap-2 p-4 lg:text-center lg:border-r lg:border-border">
+                        <p class="text-l-text font-bold">{{ stat_number }}</p>
+                        <p>{{ stat_label }}</p>
+                    </div>
+                {{ /stats_cards }}
+            </div>
+        </div>
+    </section>
+
+    <section class="Location">
+        <div class="container-fluid">
+            <h2 class="font-bold text-heading-text lg:text-l-text lg:text-center mb-4">{{ location_title }}</h2>
+
+            <div class="location-wrapper grid lg:grid-cols-12 gap-8 py-8">
+                <div class="image h-75 lg:col-span-4">
+                    <img src={{ location_image }} alt={{ location_image:alt ?? app_configuration:address }} class="rounded-lg object-center" />
+                </div>
+
+                <div class="info lg:col-span-8 lg:grid lg:grid-cols-12 lg:gap-8">
+                    <p class="address text-heading-text lg:col-span-4">{{ app_configuration:city }}</p>
+
+                    <div class="contacts space-y-2 lg:col-span-8">
+                        <p class="flex gap-2 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin preview-icon w-5 h-5">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>{{ app_configuration:address }}</span>
+                        </p>
+                        <p class="flex gap-2 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone preview-icon w-5 h-5">
+                                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
+                            </svg>
+                            <span>{{ app_configuration:business_phone_number }}</span>
+                        </p>
+                        <p class="flex gap-2 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail preview-icon w-5 h-5">
+                                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            </svg>
+                            <span>{{ app_configuration:email }}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

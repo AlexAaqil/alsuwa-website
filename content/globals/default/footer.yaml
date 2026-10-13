@@ -3,16 +3,18 @@ quick_links:
   -
     id: zzukiSxk2eZppPahdzG9j
     link_text: Home
-    link_url: 'entry::049ed0c0-9796-43f7-b158-4f6129328c12'
+    link_url: /
   -
     id: GVnp5_cGtlaQwpaRmCeEc
     link_text: About
+    link_url: /about
   -
     id: WsdyAa7snqRpbawtz1dfM
     link_text: Services
   -
     id: z9KsA_a1-BRmZbXRXqs1l
     link_text: Portfolio
+    link_url: /portfolio
   -
     id: Sf7T2eTJ3YmSG4jS43kx_
     link_text: Software

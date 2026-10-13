@@ -1,0 +1,86 @@
+title: PortfolioPage
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: portfoliopage_title
+            field:
+              type: text
+              display: 'PortfolioPage Title'
+          -
+            handle: portfoliopage_description
+            field:
+              type: textarea
+              display: 'PortfolioPage Description'
+          -
+            handle: portfolio_grid
+            field:
+              type: grid
+              display: 'Portfolio Grid'
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: description
+                  field:
+                    type: textarea
+                    display: Description
+                -
+                  handle: tags_grid
+                  field:
+                    type: grid
+                    display: 'Tags Grid'
+                    fields:
+                      -
+                        handle: title
+                        field:
+                          type: text
+                          display: Title
+                -
+                  handle: links_grid
+                  field:
+                    type: grid
+                    display: 'Links Grid'
+                    fields:
+                      -
+                        handle: link_text
+                        field:
+                          type: text
+                          display: 'Link Text'
+                      -
+                        handle: link_url
+                        field:
+                          type: link
+                          display: 'Link Url'
+                -
+                  handle: image
+                  field:
+                    container: statamic_images
+                    max_files: 1
+                    min_files: 1
+                    type: assets
+                    display: Image
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

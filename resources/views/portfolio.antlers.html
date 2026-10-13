@@ -1,0 +1,39 @@
+<main class="AboutPage">
+    <section class="Hero">
+        <div class="container-fluid">
+            <h1 class="font-bold text-heading-text lg:text-l-text lg:text-center mb-4">{{ portfoliopage_title }}</h1>
+            <p class="lg:text-center w-[60%] lg:mx-auto">{{ portfoliopage_description }}</p>
+        </div>
+    </section>
+
+    <section class="Portfolio">
+        <div class="container-fluid">
+            <div class="portfolio-wrapper grid gap-8">
+                {{ portfolio_grid }}
+                    <div class="card grid lg:grid-cols-2 items-center gap-8 bg-highlight rounded-lg p-4">
+                        <div class="content space-y-4">
+                            <p class="title font-bold text-heading-text">{{ title }}</p>
+                            <p class="description">{{ description }}</p>
+
+                            <div class="badges">
+                                {{ tags_grid }}
+                                    <span>{{ title }}</span>
+                                {{ /tags_grid }}
+                            </div>
+
+                            <div class="actions">
+                                {{ links_grid }}
+                                    <a href={{ link_url }} target="_blank" class="inline-link">{{ link_text }}</a>
+                                {{ /links_grid }}
+                            </div>
+                        </div>
+
+                        <div class="image w-full h-[30dvh] lg:h-[40dvh]">
+                            <img src={{ image }} alt={{ image:alt ?? title }} class="h-full w-full object-contain" />
+                        </div>
+                    </div>
+                {{ /portfolio_grid }}
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,85 @@
+title: AboutPage
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: aboutpage_title
+            field:
+              type: text
+              display: 'AboutPage Title'
+          -
+            handle: aboutpage_description
+            field:
+              type: textarea
+              display: 'AboutPage Description'
+          -
+            handle: mission_vision_title
+            field:
+              type: text
+              display: 'Mission&Vision Title'
+          -
+            handle: mission_vision_grid
+            field:
+              type: grid
+              display: 'Mission Vision Grid'
+              fields:
+                -
+                  handle: card_title
+                  field:
+                    type: text
+                    display: 'Card Title'
+                -
+                  handle: card_content
+                  field:
+                    type: textarea
+                    display: 'Card Content'
+          -
+            handle: stats_cards
+            field:
+              type: grid
+              display: 'Stats Cards'
+              fields:
+                -
+                  handle: stat_number
+                  field:
+                    type: text
+                    display: 'Stat Number'
+                -
+                  handle: stat_label
+                  field:
+                    type: text
+                    display: 'Stat Label'
+          -
+            handle: location_title
+            field:
+              type: text
+              display: 'Location Title'
+          -
+            handle: location_image
+            field:
+              container: statamic_images
+              type: assets
+              display: 'Location Image'
+              max_files: 1
+              min_files: 1
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

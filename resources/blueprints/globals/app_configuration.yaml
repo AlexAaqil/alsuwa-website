@@ -16,10 +16,25 @@ tabs:
               type: text
               display: 'Brand Tagline'
           -
+            handle: city
+            field:
+              type: text
+              display: City
+          -
             handle: address
             field:
               type: text
               display: Address
+          -
+            handle: business_phone_number
+            field:
+              type: text
+              display: 'Business Phone Number'
+          -
+            handle: whatsapp_phone_number
+            field:
+              type: text
+              display: 'Whatsapp Phone Number'
           -
             handle: email
             field:
