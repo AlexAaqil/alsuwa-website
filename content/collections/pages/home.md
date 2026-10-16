@@ -4,7 +4,7 @@ blueprint: homepage
 title: Home
 template: home
 updated_by: 40b3ce1a-342a-451d-9f4d-fa4aa4a56c17
-updated_at: 1791211661
+updated_at: 1792187943
 punch_line: 'Custom Software, Websites & Business Systems for Growing Businesses.'
 description: 'We help businesses scale through custom software, e-commerce platforms, ERP Systems, management systems and visual design.'
 hero_actions:
@@ -104,7 +104,7 @@ pricing_grid:
   -
     id: SNT5hBw9Che4yoPVg0wZT
     title: Essentials
-    price: 'Ksh. 26,032'
+    price: 'Ksh. 26,000'
     renewable_period: '(one-time payment)'
     description: 'Company Website Development'
     features:
@@ -132,7 +132,7 @@ pricing_grid:
   -
     id: UCuY5DZrW11dIqqNnHsKZ
     title: Growth
-    price: 'Ksh. 36,032'
+    price: 'Ksh. 36,000'
     renewable_period: '(one-time payment)'
     description: 'Custom Software for businesses ready to scale'
     features:
