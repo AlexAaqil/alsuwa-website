@@ -13,3 +13,10 @@ preferences:
         - 'content::collections::pages'
       items:
         'content::collections::pages': '@move'
+  forms:
+    contact_us:
+      columns:
+        - full_name
+        - project_type
+        - budget_range
+        - datestamp

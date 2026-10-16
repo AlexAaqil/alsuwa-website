@@ -1,0 +1,77 @@
+<div class="ContactPage">
+    <section class="contact-page-content">
+        <div class="container-fluid grid gap-8 lg:grid-cols-2">
+            <div class="content space-y-4">
+                <h1 class="title font-accent font-bold text-l-text">{{ contact_page_title }}</h1>
+                <p>{{ contact_page_description | nl2br }}</p>
+
+                <div class="extras flex flex-wrap gap-8">
+                    <div class="flex gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer preview-icon w-4 h-4"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+                        <span class="text-body-label-text">24 hour response</span>
+                    </div>
+
+                    <div class="flex gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video preview-icon w-4 h-4"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+                        <span class="text-body-label-text">Free discovery call</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form">
+                {{ form:create in="contact_us" }}
+                    {{ if success }}
+                        <p class="text-green-600">Thanks - your message has been sent.</p>
+                    {{ /if }}
+
+                    {{ fields }}
+                        <div class="mb-6">
+                            <label for="{{ handle }}" class="block font-medium mb-2">{{ display }}</label>
+
+                            {{ if type == 'textarea' }}
+                                <textarea
+                                    name="{{ handle }}"
+                                    id="{{ handle }}"
+                                    rows="4"
+                                    class="w-full border border-gray-300 p-4 focus:outline-none focus:border-black rounded-sm"
+                                    placeholder="Enter your message or project description."
+                                >{{ old }}</textarea>
+                            {{ elseif type == 'select' }}
+                                <select
+                                    name="{{ handle }}"
+                                    name="{{ id }}"
+                                    class="w-full border border-gray-300 p-4 focus:outline-none focus:border-black rounded-sm"
+                                >
+                                    {{ if placeholder }}
+                                        <option value="">{{ placeholder }}</option>
+                                    {{ /if }}
+
+                                    {{ foreach:options as="option_key|option_label" }}
+                                        <option value="{{ option_key }}" {{ if option_key == old }}selected{{ /if }}>{{ option_label }}</option>
+                                    {{ /foreach:options }}
+                                </select>
+                            {{ else }}
+                                <input
+                                    type="{{ if handle == 'email' }}email{{ else }}text{{ /if }}"
+                                    name="{{ handle }}"
+                                    id="{{ handle }}"
+                                    class="w-full border border-gray-300 p-4 focus:outline-none focus:border-black rounded-sm"
+                                    placeholder="{{ if handle == 'email' }}janedoe@gmail.com{{ else }}Jane Doe{{ /if }}"
+                                    value="{{ old }}"
+                                />
+                            {{ /if }}
+
+                            {{ if error }}
+                                <p class="text-red-500 text-sm mt-1">{{ error }}</p>
+                            {{ /if }}
+                        </div>
+                    {{ /fields }}
+
+                    <button type="submit" class="bg-foreground text-background px-8 py-4 font-bold uppercase tracking-wide hover:bg-gray-800 transition rounded-sm">
+                        Send Message
+                    </button>
+                {{ /form:create }}
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,72 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: full_name
+            field:
+              type: text
+              display: 'Full Name'
+              validate:
+                - required
+          -
+            handle: project_type
+            field:
+              options:
+                -
+                  key: custom_software
+                  value: 'Custom Software'
+                -
+                  key: web_development
+                  value: 'Web Development'
+                -
+                  key: ui_ux_design
+                  value: 'UI/UX Design'
+                -
+                  key: mobile_app_development
+                  value: 'Mobile App Development'
+                -
+                  key: api_integration
+                  value: 'API Integration'
+                -
+                  key: other
+                  value: Other
+              type: select
+              display: 'Project Type'
+              placeholder: 'Select Project Type'
+              clearable: true
+          -
+            handle: budget_range
+            field:
+              options:
+                -
+                  key: '0_26000'
+                  value: '0 - 26,000'
+                -
+                  key: '27000_30000'
+                  value: '26,000 - 30,000'
+                -
+                  key: '31000_36000'
+                  value: '31,000 - 36,000'
+                -
+                  key: '37000_50000'
+                  value: '37,000 - 50,000'
+                -
+                  key: '51000_100000'
+                  value: '51,000 - 100,000'
+                -
+                  key: '100000_400000'
+                  value: '100,000 - 400,000'
+              type: select
+              display: 'Budget Range (Ksh)'
+              placeholder: 'Select Project Type'
+              clearable: true
+          -
+            handle: project_description
+            field:
+              type: textarea
+              display: 'Project Description'
+              validate:
+                - required
