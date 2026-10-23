@@ -1,0 +1,126 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Content
+        fields:
+          -
+            handle: image
+            field:
+              container: statamic_images
+              max_files: 1
+              min_files: 1
+              type: assets
+              display: Image
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: short_description
+            field:
+              type: textarea
+              display: 'Short Description'
+          -
+            handle: service_tags
+            field:
+              type: grid
+              display: 'Service Tags'
+              fields:
+                -
+                  handle: tag
+                  field:
+                    type: text
+                    display: Tag
+          -
+            handle: info_link
+            field:
+              type: link
+              display: 'Info Link'
+          -
+            handle: info_link_text
+            field:
+              type: text
+              display: 'Info Link Text'
+          -
+            handle: content
+            field:
+              buttons:
+                - h1
+                - h2
+                - h3
+                - bold
+                - italic
+                - superscript
+                - subscript
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+                - image
+              reading_time: true
+              word_count: true
+              container: statamic_images
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+              sets:
+                services_grid:
+                  display: 'Services Grid'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: services_cards
+                          field:
+                            type: grid
+                            display: 'Services Cards'
+                            fields:
+                              -
+                                handle: title
+                                field:
+                                  type: text
+                                  display: Title
+                              -
+                                handle: short_description
+                                field:
+                                  type: text
+                                  display: 'Short Description'
+                              -
+                                handle: features_list
+                                field:
+                                  type: grid
+                                  display: 'Features List'
+                                  fields:
+                                    -
+                                      handle: feature
+                                      field:
+                                        type: text
+                                        display: Feature
+          -
+            handle: is_featured
+            field:
+              type: toggle
+              display: 'Is Featured'
+          -
+            handle: is_visible
+            field:
+              type: toggle
+              display: 'Is Visible'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+title: 'Services Collection'

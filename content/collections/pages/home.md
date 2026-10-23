@@ -4,18 +4,18 @@ blueprint: homepage
 title: Home
 template: home
 updated_by: 40b3ce1a-342a-451d-9f4d-fa4aa4a56c17
-updated_at: 1792187943
+updated_at: 1792696416
 punch_line: 'Custom Software, Websites & Business Systems for Growing Businesses.'
 description: 'We help businesses scale through custom software, e-commerce platforms, ERP Systems, management systems and visual design.'
 hero_actions:
   -
     id: JamPFaEJcB0CZ6oktjEmw
     hero_action_text: 'Schedule a Call'
-    hero_action_url: /contact-page
+    hero_action_url: 'entry::f81fc289-857f-4609-bcc4-b803f985b487'
   -
     id: 3woBAJrIFK2NicJblmWOM
     hero_action_text: 'Get in Touch'
-    hero_action_url: /contact-page
+    hero_action_url: 'entry::f81fc289-857f-4609-bcc4-b803f985b487'
 services_title: Services
 services_description: 'Every project starts with one question: what outcome are you actually trying to achieve? We build infrastructure that answers that - not software that ticks a feature list.'
 services_grid:

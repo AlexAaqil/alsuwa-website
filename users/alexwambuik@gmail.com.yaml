@@ -6,6 +6,8 @@ preferences:
   collections:
     pages:
       view: tree
+    services_collection:
+      view: tree
   nav:
     content:
       reorder:
@@ -20,3 +22,6 @@ preferences:
         - project_type
         - budget_range
         - datestamp
+  assets:
+    statamic_images:
+      mode: grid

@@ -1,0 +1,45 @@
+<main class="ServicesPage">
+    <section class="Hero">
+        <div class="container-fluid">
+            <h1 class="font-bold text-heading-text lg:text-l-text lg:text-center mb-4">{{ service_page_title }}</h1>
+            <p class="lg:text-center lg:w-[60%] lg:mx-auto">{{ service_page_description }}</p>
+        </div>
+    </section>
+
+    <section class="Services">
+        <div class="container-fluid">
+            <div class="services-wrapper grid lg:grid-cols-2 gap-8">
+                {{ if {collection:services_collection} }}
+                    {{ collection:services_collection }}
+                        <div class="service space-y-2 p-2 bg-highlight rounded-lg flex flex-col">
+                            <div class="image-wrapper w-full h-[30dvh] lg:h-[40dvh] relative bg-accent p-1 rounded-lg">
+                                <div class="image w-full h-full rounded-lg overflow-hidden">
+                                    <img src={{ image:url }} alt={{ image:alt ?? title }} class="h-full w-full object-cover" />
+                                </div>
+                            </div>
+
+                            <div class="content p-4 space-y-4  flex-1">
+                                <div class="info space-y-2">
+                                    <p class="font-bold">{{ title }}</p>
+                                    <p>{{ short_description }}</p>
+                                </div>
+                            </div>
+
+                            <div class="pills px-4">
+                                {{ service_tags }}
+                                    <span>{{ tag }}</span>
+                                {{ /service_tags }}
+                            </div>
+
+                            <div class="action px-4 pb-4 mt-4">
+                                <a href="{{ url }}" class="py-2 px-4 rounded-sm font-medium text-center bg-accent text-accent-foreground">Service Info</a>
+                            </div>
+                        </div>
+                    {{ /collection:services_collection }}
+                {{ else }}
+                    <p class="text-caption-text col-span-full py-8 lg:text-center">No Services have been added yet.</p>
+                {{ /if }}
+            </div>
+        </div>
+    </section>
+</main>
