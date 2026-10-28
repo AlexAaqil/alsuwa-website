@@ -7,7 +7,7 @@ short_description: 'Boost your online visibility, improve search rankings and dr
 is_featured: false
 is_visible: false
 updated_by: 40b3ce1a-342a-451d-9f4d-fa4aa4a56c17
-updated_at: 1793186773
+updated_at: 1793187310
 long_description: 'We help businesses improve their search rankings through strategic optimization.'
 details_page_action_button_link: "https://wa.me/254745744261?text=Hi%20Alsuwa!%20I'd%20like%20to%20schedule%20a%20call%20about%20the%20SEO%20service!"
 details_page_action_button_text: 'Get SEO Audit'
@@ -114,4 +114,14 @@ process_steps:
     label: '04'
     title: 'Monitoring & Refinement'
     description: 'We continuously monitor performance, analyze data, and refine our strategies to ensure long-term success and ROI.'
+service_tags:
+  -
+    id: FK0qEocW-OvNiwgngHKOP
+    tag: 'Technical SEO'
+  -
+    id: xmlk-PyYoE3N1QdTvkv_n
+    tag: 'On-Page SEO'
+  -
+    id: eLB7Eys2gsooI7mRMHzt9
+    tag: 'Off-Page SEO'
 ---
