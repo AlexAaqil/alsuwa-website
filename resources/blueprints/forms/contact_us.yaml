@@ -11,6 +11,15 @@ tabs:
               display: 'Full Name'
               validate:
                 - required
+              placeholder: 'Jane Doe'
+          -
+            handle: phone_number
+            field:
+              placeholder: '+254 745 744 261'
+              type: text
+              display: 'Phone Number'
+              validate:
+                - required
           -
             handle: project_type
             field:
