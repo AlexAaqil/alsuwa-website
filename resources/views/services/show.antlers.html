@@ -1,36 +1,97 @@
 <div class="ServiceShowPage">
-    <section class="header mb-4">
-        <div class="container-fluid py-4">
-            <h1 class="font-bold text-heading-text lg:text-center">{{ title }}</h1>
-        </div>
-    </section>
-
-    <section class="content">
+    <section class="Hero">
         <div class="container-fluid">
-            {{ if content }}
-                {{ content }}
-                    {{ if type == "text" }}
-                        <div class="prose mb-4">{{ text }}</div>
+            <div class="hero-wrapper grid md:grid-cols-2 gap-12 items-center mb-15">
+                <div class="content space-y-4">
+                    <h1 class="font-accent font-bold text-heading-text lg:text-l-text">{{ title }}</h1>
+                    <p class="lg:w-[90%]">{{ short_description }}</p>
 
-                    {{ elseif type == "content_image" }}
-                        <div class="image h-150 w-full border border-border bg-gray-50 mb-4 mt-4">
-                            <img src="{{ content_image:url }}" alt="{{ content_image:alt }}" class="w-full h-full object-contain">
-                        </div>
+                    <p class="lg:w-[90%]">{{ long_description | nl2br }}</p>
 
-                    {{ elseif type == "content_video" }}
-                        <div class="video h-150 w-full border border-border bg-gray-50 mb-4 mt-4">
-                            <iframe 
-                                src="{{ content_video | replace('watch?v=','embed/') }}" 
-                                frameborder="0" 
-                                allowfullscreen
-                                class="w-full h-full">
-                            </iframe>
-                        </div>
-                    {{ /if }}
-                {{ /content }}
-            {{ else }}
-                <p class="text-caption-text py-8 text-center">No content has been added yet.</p>
-            {{ /if }}
+                    <div class="actions">
+                        <a href={{details_page_action_button_link}} class="inline-block px-8 py-4 bg-accent text-accent-foreground rounded-sm hover:bg-accent/80 transition-all font-medium">{{ details_page_action_button_text }}</a>
+                    </div>
+                </div>
+    
+                <div class="relative">
+                    <div class="bg-green rounded-[45px] p-4 md:p-8 relative z-10">
+                    <img src={{image}} alt="{{ alt ?? title }}" class="w-full h-auto rounded-[35px]" />
+                    </div>
+                    <div class="absolute top-8 left-8 right-8 bottom-8 bg-dark rounded-[45px] -z-10"></div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section class="Features">
+        <div class="container-fluid">
+            <h2 class="font-bold text-heading-text lg:text-l-text text-center mb-12">{{ features_title }}</h2>
+
+            <div class="features-wrapper grid lg:grid-cols-4 gap-12">
+                {{ features }}
+                    <div class="feature space-y-4 p-4 bg-highlight rounded-lg">
+                        <p class="title font-semibold">{{ title }}</p>
+                        <p class="description">{{ description }}</p>
+
+                        <ul class="list-none list-inside space-y-2">
+                            {{ features_list }}
+                                <li class="flex items-start">
+                                    <svg class="mr-2 w-5 h-5 mt-1 text-green" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg> <span>{{ title }}</span>
+                                </li>
+                            {{ /features_list }}
+                        </ul>
+                    </div>
+                {{ /features }}
+            </div>
+        </div>
+    </section>
+
+    <section class="FAQs">
+        <div class="container-fluid">
+            <h2 class="font-bold text-heading-text lg:text-l-text text-center mb-12">{{ faq_title }}</h2>
+            
+            <div class="faqs-wrapper space-y-4 max-w-3xl mx-auto">
+                {{ faqs }}
+                    <div class="faq-item p-4">
+                        <h3 class="font-semibold text-lg">{{ question }}</h3>
+                        <p class="text-muted-foreground mt-2">{{ answer }}</p>
+                    </div>
+                {{ /faqs }}
+            </div>
+        </div>
+    </section>
+
+    <section class="Process">
+        <div class="container-fluid">
+            <div class="section-header text-center space-y-4 mb-4 lg:mb-8">
+                <h2 class="font-accent font-bold text-heading-text lg:text-l-text">{{ process_title }}</h2>
+            </div>
+
+            <div class="content">
+                <div class="process-steps grid lg:grid-cols-3 gap-8">
+                    {{ process_steps }}
+                        <div class="step space-y-2 p-4 border border-border rounded-lg">
+                            <p class="font-bold text-muted-foreground">{{ label }}</p>
+                            <p class="font-bold">{{ title }}</p>
+                            <p>{{ description }}</p>
+                        </div>
+                    {{ /process_steps }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ if {collection:services_collection} }}
+        <section class="OtherServices">
+            <div class="container-fluid grid grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12">
+                {{ collection:services_collection }}
+                    <div class="link">
+                        <a href="{{ url }}" class="block py-2 px-4 rounded-sm font-medium text-center border border-border">{{ title }}</a>
+                    </div>
+                {{ /collection:services_collection }}
+            </div>
+        </section>
+    {{ /if }}
 </div>
